@@ -132,7 +132,7 @@ class Qismo_Widget_Admin {
     public function validate($input)
     {
         $valid = array();
-        $valid['app_id'] = (isset($input['app_id']) && !empty($input['app_id'])) ? $input['app_id'] : '';
+        $valid['app_id'] = (isset($input['app_id']) && !empty($input['app_id'])) ? sanitize_text_field($input['app_id']) : '';
 
         return $valid;
 	}
