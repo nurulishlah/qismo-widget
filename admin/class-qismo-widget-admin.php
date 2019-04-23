@@ -4,7 +4,7 @@
  * The admin-specific functionality of the plugin.
  *
  * @link       https://ishlah.github.io
- * @since      1.0.0
+ * @since      0.1.0
  *
  * @package    Qismo_Widget
  * @subpackage Qismo_Widget/admin
@@ -25,7 +25,7 @@ class Qismo_Widget_Admin {
 	/**
 	 * The ID of this plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    0.1.0
 	 * @access   private
 	 * @var      string    $plugin_name    The ID of this plugin.
 	 */
@@ -34,7 +34,7 @@ class Qismo_Widget_Admin {
 	/**
 	 * The version of this plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    0.1.0
 	 * @access   private
 	 * @var      string    $version    The current version of this plugin.
 	 */
@@ -43,7 +43,7 @@ class Qismo_Widget_Admin {
 	/**
 	 * Initialize the class and set its properties.
 	 *
-	 * @since    1.0.0
+	 * @since    0.1.0
 	 * @param      string    $plugin_name       The name of this plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
@@ -57,7 +57,7 @@ class Qismo_Widget_Admin {
 	/**
 	 * Register the stylesheets for the admin area.
 	 *
-	 * @since    1.0.0
+	 * @since    0.1.0
 	 */
 	public function enqueue_styles() {
 
@@ -80,7 +80,7 @@ class Qismo_Widget_Admin {
 	/**
 	 * Register the JavaScript for the admin area.
 	 *
-	 * @since    1.0.0
+	 * @since    0.1.0
 	 */
 	public function enqueue_scripts() {
 
@@ -100,8 +100,12 @@ class Qismo_Widget_Admin {
 
 	}
 
+    /**
+     * Register the administration menu for this plugin into the WordPress Dashboard menu.
+     */
     public function add_plugin_admin_menu()
     {
+        // Add a settings page for this plugin to the Settings menu.
         add_options_page(
             'Qiscus Multichannel Widget Settings',
             'Qiscus Widget',
@@ -111,6 +115,12 @@ class Qismo_Widget_Admin {
         );
 	}
 
+    /**
+     * Add settings action link to the plugins page.
+     *
+     * @param $links
+     * @return array
+     */
     public function add_action_links($links)
     {
         $settings_link = array(
@@ -119,16 +129,28 @@ class Qismo_Widget_Admin {
         return array_merge($settings_link, $links);
 	}
 
+    /**
+     * Render the settings page for this plugin.
+     */
     public function display_plugin_setup_page()
     {
         include_once ('partials/qismo-widget-admin-display.php');
 	}
 
+    /**
+     * Save settings
+     */
     public function options_update()
     {
         register_setting($this->plugin_name, $this->plugin_name, array($this, 'validate'));
 	}
 
+    /**
+     * Validate inputted values. In this case Qiscus App ID
+     *
+     * @param $input
+     * @return array
+     */
     public function validate($input)
     {
         $valid = array();
