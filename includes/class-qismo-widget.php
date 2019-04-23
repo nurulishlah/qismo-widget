@@ -183,6 +183,8 @@ class Qismo_Widget {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
+		// Add Qismo Widget snippet code
+        $this->loader->add_action('wp_footer', $plugin_public, 'add_qismo_snippet_code');
 	}
 
 	/**

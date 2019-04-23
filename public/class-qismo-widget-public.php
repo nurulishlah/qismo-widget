@@ -103,4 +103,9 @@ class Qismo_Widget_Public {
 
 	}
 
+    public function add_qismo_snippet_code()
+    {
+        include_once ('partials/qismo-widget-public-display.php');
+	}
+
 }
