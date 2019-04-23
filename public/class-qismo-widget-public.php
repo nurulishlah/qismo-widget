@@ -73,7 +73,8 @@ class Qismo_Widget_Public {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/qismo-widget-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( 'qiscus-sdk', 'https://qiscus-sdk.s3-ap-southeast-1.amazonaws.com/web/v2.8.2/qiscus-sdk.2.8.2.css', array(), '2.8.2', 'all' );
+		wp_enqueue_style( $this->plugin_name, 'https://s3-ap-southeast-1.amazonaws.com/qiscus-sdk/public/qismo/qismo.css', array(), '1.4.0', 'all' );
 
 	}
 
@@ -96,8 +97,15 @@ class Qismo_Widget_Public {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/qismo-widget-public.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name . 'jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js', array(), '3.3.1', true );
+		wp_enqueue_script( 'qiscus-sdk', 'https://qiscus-sdk.s3-ap-southeast-1.amazonaws.com/web/v2.8.2/qiscus-sdk.2.8.2.js', array( $this->plugin_name . 'jquery' ), '2.8.2', true );
+		wp_enqueue_script( $this->plugin_name, 'https://s3-ap-southeast-1.amazonaws.com/qiscus-sdk/public/qismo/qismo.js', array( $this->plugin_name . 'jquery', 'qiscus-sdk' ), '1.4.0', true );
 
+	}
+
+    public function add_qismo_snippet_code()
+    {
+        include_once ('partials/qismo-widget-public-display.php');
 	}
 
 }

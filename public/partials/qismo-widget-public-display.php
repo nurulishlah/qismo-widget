@@ -13,4 +13,11 @@
  */
 ?>
 
-<!-- This file should primarily consist of HTML with a little bit of PHP. -->
+<!-- Qismo widget snippet code -->
+<div id='qiscus-widget'></div>
+<script>
+    window.qismoConfig = {
+        "appID": "dedr-1msznaesjrtepiq4",
+        "buttonHasText": true
+    }
+</script>
