@@ -1,22 +1,15 @@
 <?php
 
 /**
- * The plugin bootstrap file
- *
- * This file is read by WordPress to generate the plugin information in the plugin
- * admin area. This file also includes all of the dependencies used by the plugin,
- * registers the activation and deactivation functions, and defines a function
- * that starts the plugin.
- *
  * @link              https://ishlah.github.io
- * @since             1.0.0
+ * @since             0.1.0
  * @package           Qismo_Widget
  *
  * @wordpress-plugin
  * Plugin Name:       Qismo Widget
  * Plugin URI:        https://github.com/nurulishlah/qismo-widget
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
- * Version:           1.0.0
+ * Description:       A simple plugin to integrate Qiscus Multichannel Customer Service (Qismo) Widget into WordPress Site
+ * Version:           0.1.0
  * Author:            Muhamad Saad Nurul Ishlah
  * Author URI:        https://ishlah.github.io
  * License:           GPL-2.0+
@@ -32,10 +25,8 @@ if ( ! defined( 'WPINC' ) ) {
 
 /**
  * Currently plugin version.
- * Start at version 1.0.0 and use SemVer - https://semver.org
- * Rename this for your plugin and update it as you release new versions.
  */
-define( 'QISMO_WIDGET_VERSION', '1.0.0' );
+define( 'QISMO_WIDGET_VERSION', '0.1.0' );
 
 /**
  * The code that runs during plugin activation.
@@ -71,7 +62,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-qismo-widget.php';
  * then kicking off the plugin from this point in the file does
  * not affect the page life cycle.
  *
- * @since    1.0.0
+ * @since    0.1.0
  */
 function run_qismo_widget() {
 
