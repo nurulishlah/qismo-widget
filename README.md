@@ -27,10 +27,9 @@ This plugin help you to easily render the widget in your WordPress site.
 
 = How to change the widget user interface?
 
-You can do that through Qiscus multichannel dashboard in [the Integration page](https://qismo.qiscus.com/integration)
+You can do that through Qiscus multichannel dashboard in [the Integration page](https://qismo.qiscus.com/integration) 
 
 == Screenshots ==
-
 
 1. ![Qiscus Multichannel Settings](screenshot-1.png)
 2. ![Qiscus Multichannel Widget Sign in Appearance](screenshot-2.png)
