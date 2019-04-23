@@ -26,6 +26,22 @@
     </p>
     <hr>
     <form method="post" action="options.php" name="qismo_options">
+
+        <?php
+
+            //Grab all options
+            $options = get_option($this->plugin_name);
+            print_r($options);
+            print_r($options['app_id']);
+            // Qismo app_id
+            $app_id = $options['app_id'];
+        ?>
+
+        <?php
+            settings_fields($this->plugin_name);
+            do_settings_sections($this->plugin_name);
+        ?>
+
         <table class="form-table">
             <tbody>
             <tr>
@@ -33,13 +49,12 @@
                     <label><?php esc_attr_e('App ID', $this->plugin_name); ?></label>
                 </th>
                 <td>
-                    <input type="text" name="qismo_app_id"
-                           id="qismo_app_id"
-                           class="regular-text"
+                    <input type="text" name="qismo_app_id" class="regular-text"
+                           id="<?php echo $this->plugin_name; ?>-app_id"
+                           name="<?php echo $this->plugin_name; ?>[app_id]"
                            placeholder="Put your app id here ..."
-                           value="<?php
-                           echo (isset($data['app_id'])) ? $data['app_id'] : '';
-                           ?>"/>
+                           value="<?php echo (!empty($app_id)) ? $app_id : ''; ?>"
+                    />
                 </td>
             </tr>
             </tbody>
