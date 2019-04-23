@@ -31,9 +31,7 @@
 
             //Grab all options
             $options = get_option($this->plugin_name);
-            print_r($options);
-            print_r($options['app_id']);
-            // Qismo app_id
+            // get app_id
             $app_id = $options['app_id'];
         ?>
 
@@ -46,7 +44,7 @@
             <tbody>
             <tr>
                 <th scope="row">
-                    <label><?php esc_attr_e('App ID', $this->plugin_name); ?></label>
+                    <label for="<?php echo $this->plugin_name; ?>-app_id"><?php esc_attr_e('App ID', $this->plugin_name); ?></label>
                 </th>
                 <td>
                     <input type="text" name="qismo_app_id" class="regular-text"
