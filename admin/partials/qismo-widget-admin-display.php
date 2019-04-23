@@ -13,7 +13,7 @@
  */
 ?>
 
-<!-- This file should primarily consist of HTML with a little bit of PHP. -->
+<!-- Qismo widget settings page -->
 <div class="wrap">
     <h1><?php echo esc_html(get_admin_page_title()); ?></h1>
     <p>

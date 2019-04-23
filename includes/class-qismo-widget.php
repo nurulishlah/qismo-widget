@@ -180,6 +180,7 @@ class Qismo_Widget {
 
 		$plugin_public = new Qismo_Widget_Public( $this->get_plugin_name(), $this->get_version() );
 
+		// Insert required Qismo libraries by Enqueueing them
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
