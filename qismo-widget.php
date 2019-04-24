@@ -9,7 +9,7 @@
  * Plugin Name:       Qismo Widget
  * Plugin URI:        https://github.com/nurulishlah/qismo-widget
  * Description:       A simple plugin to integrate Qiscus Multichannel Customer Service (Qismo) Widget into WordPress Site
- * Version:           0.1.0
+ * Version:           0.5.0
  * Author:            Muhamad Saad Nurul Ishlah
  * Author URI:        https://ishlah.github.io
  * License:           GPL-2.0+
@@ -26,7 +26,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Currently plugin version.
  */
-define( 'QISMO_WIDGET_VERSION', '0.1.0' );
+define( 'QISMO_WIDGET_VERSION', '0.5.0' );
 
 /**
  * The code that runs during plugin activation.

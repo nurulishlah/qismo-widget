@@ -12,7 +12,7 @@
  * @subpackage Qismo_Widget/public/partials
  */
 
-
+// get settings option in regard of app_id
 $options = get_option($this->plugin_name);
 ?>
 
