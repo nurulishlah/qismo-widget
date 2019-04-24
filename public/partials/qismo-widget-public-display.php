@@ -11,13 +11,16 @@
  * @package    Qismo_Widget
  * @subpackage Qismo_Widget/public/partials
  */
+
+
+$options = get_option($this->plugin_name);
 ?>
 
 <!-- Qismo widget snippet code -->
 <div id='qiscus-widget'></div>
 <script>
     window.qismoConfig = {
-        "appID": "dedr-1msznaesjrtepiq4",
+        "appID": "<?php echo $options['app_id']; ?>",
         "buttonHasText": true
     }
 </script>
