@@ -22,6 +22,13 @@
  */
 class Qismo_Widget_Admin {
 
+    /**
+     * Holds the values to be used in the fields callbacks
+     *
+     * @var array
+     */
+    private $options;
+
 	/**
 	 * The ID of this plugin.
 	 *
@@ -138,11 +145,26 @@ class Qismo_Widget_Admin {
 	}
 
     /**
-     * Save settings
+     * Register and add settings
      */
     public function options_update()
     {
-        register_setting($this->plugin_name, $this->plugin_name, array($this, 'validate'));
+        register_setting($this->plugin_name, $this->plugin_name, array($this, 'sanitize'));
+
+        add_settings_section(
+            'qismo_widget_appid',
+            'Qiscus Multichannel App ID',
+            array($this, 'print_section_info'),
+            $this->plugin_name
+        );
+
+        add_settings_field(
+            'app_id',
+            'App ID',
+            array($this, 'appid_callback'),
+            $this->plugin_name,
+            'qismo_widget_appid'
+        );
 	}
 
     /**
@@ -151,12 +173,37 @@ class Qismo_Widget_Admin {
      * @param $input
      * @return array
      */
-    public function validate($input)
+    public function sanitize($input)
     {
         $valid = array();
         $valid['app_id'] = (isset($input['app_id']) && !empty($input['app_id'])) ? sanitize_text_field($input['app_id']) : '';
 
         return $valid;
+	}
+
+    /**
+     * Section information
+     */
+    public function print_section_info()
+    {
+        print '<p>' .
+            _e('Please provide your Qiscus Multichannel App ID. You can get your App ID from <a href="https://qismo.qiscus.com/settings#information" target="_blank">App Information page</a>.',
+                $this->plugin_name
+            ) . '</p>';
+
+	}
+
+    /**
+     * Form to gather app_id
+     */
+    public function appid_callback()
+    {
+        $this->options = get_option($this->plugin_name);
+        $name = $this->plugin_name .'[app_id]';
+        $value = isset($this->options['app_id']) ? esc_attr($this->options['app_id']) : '';
+        $format = '<input class="regular-text" type="text" id="app_id" name="%s" value="%s" 
+                    placeholder="Put your app id here ..." required="required">';
+        echo sprintf($format, $name, $value);
 	}
 
 }
