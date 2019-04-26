@@ -31,10 +31,9 @@ You can do that through Qiscus multichannel dashboard in [the Integration page](
 
 == Screenshots ==
 
-
-1. ![Qiscus Multichannel Settings](screenshot-1.png)
-2. ![Qiscus Multichannel Widget Sign in Appearance](screenshot-2.png)
-2. ![Qiscus Multichannel Chat Room](screenshot-3.png)
+1. ![Qiscus Multichannel Settings](https://d1edrlpyc25xu0.cloudfront.net/kiwari-prod/image/upload/9dAEJ09u9C/screenshot-1.png)
+2. ![Qiscus Multichannel Widget Sign in Appearance](https://d1edrlpyc25xu0.cloudfront.net/kiwari-prod/image/upload/6DJTBo7g_8/screenshot-2.png)
+2. ![Qiscus Multichannel Chat Room](https://d1edrlpyc25xu0.cloudfront.net/kiwari-prod/image/upload/XrKawCNgF_/screenshot-3.png)
 
 == Changelog ==
 
