@@ -26,7 +26,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Currently plugin version.
  */
-define( 'QISMO_WIDGET_VERSION', '0.5.0' );
+define( 'QISMO_WIDGET_VERSION', '0.5.1' );
 
 /**
  * The code that runs during plugin activation.
