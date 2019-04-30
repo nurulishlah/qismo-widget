@@ -40,6 +40,6 @@ You can do that through Qiscus multichannel dashboard in [the Integration page](
 = 0.5.1 =
 * Fixed an issue conflicting jquery
 
-= 0.1.0 =
+= 0.5.0 =
 * Initial release.
 * Provide a form to input Qiscus Multichannel App ID
