@@ -1,4 +1,4 @@
-## Qismo Widget
+## Qiscus Multichannel Widget (Qismo)
 
 A simple plugin to integrate Qiscus Multichannel Customer Service (Qismo) Widget into WordPress Site.
 
@@ -26,6 +26,9 @@ This plugin help you to easily render the widget in your WordPress site.
 2. ![Qiscus Multichannel Chat Room](https://d1edrlpyc25xu0.cloudfront.net/kiwari-prod/image/upload/XrKawCNgF_/screenshot-3.png)
 
 ### Changelog
+
+#### 0.6.0 
+* Clean up
 
 #### 0.5.1
 * Fixed an issue conflicting jquery
