@@ -1,11 +1,11 @@
-=== Qismo Widget ===
+=== Qiscus Multichannel Widget ===
 
-Contributors: (nurulishlah)
+Contributors: (nurulishlah, qiscus)
 Donate link: https://ishlah.github.io
-Tags: widget, qismo, qiscus multichannel
+Tags: widget, qismo, qiscus multichannel, widget
 Requires at least: 3.0.1
-Tested up to: 5.1.1
-Stable tag: 5.1.1
+Tested up to: 5.2
+Stable tag: 5.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,9 @@ You can do that through Qiscus multichannel dashboard in [the Integration page](
 2. ![Qiscus Multichannel Chat Room](https://d1edrlpyc25xu0.cloudfront.net/kiwari-prod/image/upload/XrKawCNgF_/screenshot-3.png)
 
 == Changelog ==
+
+= 0.6.0 =
+* Clean up
 
 = 0.5.1 =
 * Fixed an issue conflicting jquery
