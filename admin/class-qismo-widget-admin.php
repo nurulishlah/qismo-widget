@@ -115,7 +115,7 @@ class Qismo_Widget_Admin {
         // Add a settings page for this plugin to the Settings menu.
         add_options_page(
             'Qiscus Multichannel Widget Settings',
-            'Qiscus Widget',
+            'Qiscus Multichannel Widget',
             'manage_options',
             $this->plugin_name,
             array($this, 'display_plugin_setup_page')
