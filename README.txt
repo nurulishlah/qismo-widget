@@ -37,6 +37,9 @@ You can do that through Qiscus multichannel dashboard in [the Integration page](
 
 == Changelog ==
 
+= 0.6.1 =
+* Remove jquery remote access from enqueueing script and use WordPress provided jquery instead
+
 = 0.6.0 =
 * Clean up
 
