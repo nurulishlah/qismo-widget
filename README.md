@@ -27,6 +27,9 @@ This plugin help you to easily render the widget in your WordPress site.
 
 ### Changelog
 
+#### 0.6.1
+* Remove jquery remote access from enqueueing script and use WordPress provided jquery instead
+
 #### 0.6.0 
 * Clean up
 
