@@ -16,12 +16,16 @@
 $options = get_option($this->plugin_name);
 ?>
 
-<!-- Qismo widget snippet code -->
+<!-- Qiscus Multichannel widget code snippet -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var s,t; s = document.createElement('script'); s.type = 'text/javascript';
-        s.src = 'https://s3-ap-southeast-1.amazonaws.com/qiscus-sdk/public/qismo/qismo-v2.js'; s.async = true;
-        s.onload = s.onreadystatechange = function() { new Qismo("<?php echo $options['app_id']; ?>"); }
+        s.src = 'https://s3-ap-southeast-1.amazonaws.com/qiscus-sdk/public/qismo/qismo-v4.js'; s.async = true;
+        s.onload = s.onreadystatechange = function() { new Qismo("<?php echo $options['app_id']; ?>", { 
+                        options: { 
+                            channel_id: <?php echo $options['channel_id']; ?>,
+                        }
+                    }); }
         t = document.getElementsByTagName('script')[0]; t.parentNode.insertBefore(s, t);
     });
 </script>

@@ -153,7 +153,7 @@ class Qismo_Widget_Admin {
 
         add_settings_section(
             'qismo_widget_appid',
-            'Qiscus Multichannel App ID',
+            'Qiscus Multichannel App ID & Channel ID',
             array($this, 'print_section_info'),
             $this->plugin_name
         );
@@ -162,6 +162,14 @@ class Qismo_Widget_Admin {
             'app_id',
             'App ID',
             array($this, 'appid_callback'),
+            $this->plugin_name,
+            'qismo_widget_appid'
+        );
+
+        add_settings_field(
+            'channel_id',
+            'Channel ID',
+            array($this, 'channelid_callback'),
             $this->plugin_name,
             'qismo_widget_appid'
         );
@@ -177,6 +185,7 @@ class Qismo_Widget_Admin {
     {
         $valid = array();
         $valid['app_id'] = (isset($input['app_id']) && !empty($input['app_id'])) ? sanitize_text_field($input['app_id']) : '';
+        $valid['channel_id'] = (isset($input['channel_id']) && !empty($input['channel_id'])) ? sanitize_text_field($input['channel_id']) : '';
 
         return $valid;
 	}
@@ -187,7 +196,7 @@ class Qismo_Widget_Admin {
     public function print_section_info()
     {
         print '<p>' .
-            _e('Please provide your Qiscus Multichannel App ID. You can get your App ID from <a href="https://qismo.qiscus.com/settings#information" target="_blank">App Information page</a>.',
+            _e('Please provide your Qiscus Multichannel App ID and Channel ID. You can get your App ID and Channel ID from code snippet in Qiscus Widget Integration page.',
                 $this->plugin_name
             ) . '</p>';
 
@@ -204,6 +213,16 @@ class Qismo_Widget_Admin {
         $format = '<input class="regular-text" type="text" id="app_id" name="%s" value="%s" 
                     placeholder="Put your app id here ..." required="required">';
         echo sprintf($format, $name, $value);
-	}
+    }
+    
+    public function channelid_callback()
+    {
+        $this->options = get_option($this->plugin_name);
+        $name = $this->plugin_name .'[channel_id]';
+        $value = isset($this->options['channel_id']) ? esc_attr($this->options['channel_id']) : '';
+        $format = '<input class="regular-text" type="text" id="channel_id" name="%s" value="%s" 
+                    placeholder="Put your channel id here ..." required="required">';
+        echo sprintf($format, $name, $value);
+    }
 
 }
