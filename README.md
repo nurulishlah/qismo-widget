@@ -28,15 +28,17 @@ This plugin help you to easily render the widget in your WordPress site.
 
 ### Changelog
 
+#### 0.8.0
+* Update snippet code for the widget with the more compact one
+* Update admin dashboard to specify which widget is used in the website based on channel id
+#### 0.7.0
+* Update snippet code for the widget with the more compact one
 #### 0.6.1
 * Remove jquery remote access from enqueueing script and use WordPress provided jquery instead
-
 #### 0.6.0 
 * Clean up
-
 #### 0.5.1
 * Fixed an issue conflicting jquery
-
 #### 0.5.0
 * Initial release.
 * Provide a form to input Qiscus Multichannel App ID
