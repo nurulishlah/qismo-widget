@@ -21,9 +21,10 @@ This plugin help you to easily render the widget in your WordPress site.
 
 ### Screenshots
 
-1. ![Qiscus Multichannel Settings](https://d1edrlpyc25xu0.cloudfront.net/kiwari-prod/image/upload/9dAEJ09u9C/screenshot-1.png)
-2. ![Qiscus Multichannel Widget Sign in Appearance](https://d1edrlpyc25xu0.cloudfront.net/kiwari-prod/image/upload/6DJTBo7g_8/screenshot-2.png)
-2. ![Qiscus Multichannel Chat Room](https://d1edrlpyc25xu0.cloudfront.net/kiwari-prod/image/upload/XrKawCNgF_/screenshot-3.png)
+1. ![Qiscus Multichannel Settings](https://ps.w.org/qiscus-multichannel-widget/assets/screenshot-1.png?rev=2423303)
+2. ![Qiscus Multichannel Widget Pop up widget](https://ps.w.org/qiscus-multichannel-widget/assets/screenshot-2.png?rev=2423303)
+3. ![Qiscus Multichannel Widget Sign in Appearance](https://ps.w.org/qiscus-multichannel-widget/assets/screenshot-3.png?rev=2423303)
+4. ![Qiscus Multichannel Chat Room](https://ps.w.org/qiscus-multichannel-widget/assets/screenshot-4.png?rev=2423303)
 
 ### Changelog
 
